@@ -135,18 +135,6 @@ id | name | email
 2 | morty | morty@email.com
 
 
-## footnotes
-
-Here's a simple footnote,[^1] and here's a longer one.[^longnote]
-
-[^1]: This is the first footnote.
-
-[^longnote]: Here's one with multiple paragraphs and code.  
-    Indent paragraphs to include them in the footnote  
-    `{ my code }`  
-    Add as many paragraphs as you like.  
-
-
 ## backslash escapes
 
 Markdown provides backslash escapes for the following characters:

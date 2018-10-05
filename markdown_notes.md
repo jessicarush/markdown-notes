@@ -17,7 +17,7 @@ Examples of some of the most common usages. Yes, there are many demos and cheats
 
 ## links
 
-As demonstarted above, you can link to any heading within your document using like this: (#lower-case-heading-replaces-spaces-with-dashes).
+As demonstrated above, you can link to any heading within your document using like this: (#lower-case-heading-replaces-spaces-with-dashes).
 
 This in an [example link](https://daringfireball.net/projects/markdown/syntax).
 

@@ -14,6 +14,7 @@ Examples of some of the most common usages. Yes, there are many demos and cheats
 - [horizontal rules](#horizontal-rules)
 - [tables](#tables)
 - [backslash escapes](#backslash-escapes)
+- [TOC Generators](#toc-generators)
 
 ## links
 
@@ -153,3 +154,21 @@ _   underscore
 .   dot
 !   exclamation mark
 ```
+
+## TOC Generators
+
+There's a [copy/paste TOC generator](https://ecotrust-canada.github.io/markdown-toc/) for markdown. A better solution is the [installable package on github](https://github.com/jonschlinkert/markdown-toc). Here's a summary of how to get it running:
+
+1. Install the package globally:
+```
+npm install -g markdown-toc
+```
+
+2. In your markdown file, type `<!-- toc -->` where you want the TOC to appear.
+
+3. Run the command to generate the TOC (example filename here is example.md):
+```
+markdown-toc -i example.md
+```
+
+I'm not sure how, but it knows to ignore the headings before `<!-- toc -->`, so for example, if you put a `## Table of Contents` heading before it, it won't get included in the TOC.

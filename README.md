@@ -1,93 +1,78 @@
 # Markdown Notes
 
-Examples of some of the most common usages. Yes, there are many demos and cheatsheets already out there, but the best way to learn is to do it yourself.
+Examples of some of the most common usages. I recognize there are many demos and cheatsheets already out there (including the [official markdown guide](https://www.markdownguide.org/basic-syntax/)), but the best way to learn is to do it yourself.
+
+## Table of contents
 
 <!-- toc -->
 
-  * [Table of contents](#table-of-contents)
-  * [links](#links)
-- [Heading 1](#heading-1)
-  * [Heading 2](#heading-2)
-    + [Heading 3](#heading-3)
-      - [Heading 4](#heading-4)
-        * [Heading 5](#heading-5)
-          + [Heading 6](#heading-6)
-  * [code](#code)
-  * [blockquotes](#blockquotes)
-  * [line breaks and paragraphs](#line-breaks-and-paragraphs)
-  * [lists](#lists)
-  * [text styles](#text-styles)
-  * [images](#images)
-  * [horizontal rules](#horizontal-rules)
-  * [tables](#tables)
-  * [backslash escapes](#backslash-escapes)
-  * [TOC Generators](#toc-generators)
-  * [Emoji](#emoji)
-
-<!-- tocstop -->
-
-## Table of contents
 - [links](#links)
-- [headings](#heading-1)
-- [code](#code)
-- [blockquotes](#blockquotes)
+- [headings](#headings)
 - [line breaks and paragraphs](#line-breaks-and-paragraphs)
+- [blockquotes](#blockquotes)
+- [code](#code)
 - [lists](#lists)
 - [text styles](#text-styles)
 - [images](#images)
 - [horizontal rules](#horizontal-rules)
 - [tables](#tables)
 - [backslash escapes](#backslash-escapes)
-- [TOC Generators](#toc-generators)
+- [TOC generators](#toc-generators)
+- [emoji](#emoji)
+
+<!-- tocstop -->
 
 ## links
 
-As demonstrated above, you can link to any heading within your document using like this: (#lower-case-heading-replace-spaces-with-dashes).
+Link to any heading within your document like this:
+```
+[Link](#lower-case-heading-replace-spaces-with-dashes)
+```
 
-This in an [example link](https://daringfireball.net/projects/markdown/syntax).
+Create an external link like this:
+```
+[example link](https://daringfireball.net/projects/markdown/syntax)
+```
+[example link](https://daringfireball.net/projects/markdown/syntax)
 
-You can add the links title attribute like this:
+You can add the title attribute like this:
+```
+[example link](https://github.com/ "Title goes here")
+```
 [example link](https://github.com/ "Title goes here")
 
-You can use link references as well:
-Here's [Google][1], [Yahoo][2], [MSN][3]
+You can create link references:
+```
+[Google][1], [Yahoo][2], [MSN][3]
+
+[1]: http://google.com/        "Google"
+[2]: http://search.yahoo.com/  "Yahoo Search"
+[3]: http://search.msn.com/    "MSN Search"
+```
+[Google][1], [Yahoo][2], [MSN][3]
 
 [1]: http://google.com/        "Google"
 [2]: http://search.yahoo.com/  "Yahoo Search"
 [3]: http://search.msn.com/    "MSN Search"
 
 You can also create automatic links out of a url:
+```
+<https://github.com/>
+```
 <https://github.com/>
 
+## headings
 
+Headings can be indicated like:
+
+```
 # Heading 1
 ## Heading 2
 ### Heading 3
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
-
-
-## code
-
-Here is a block of code:
 ```
-pip3 install mylibrary
-```
-Here is some `inline code`.
-
-You can also specify syntax highlighting:
-
-```python
-print('Python syntax highlighting')
-```
-
-
-## blockquotes
-
-> This is a blockquote
-> You can precede each line with > if you're using hard returns.  
-> Or if you're soft wrapping you can just add > to the first line.
 
 
 ## line breaks and paragraphs
@@ -97,21 +82,54 @@ Here's my new line.
 
 An empty line creates a new paragraph.
 
+
+## blockquotes
+
+`>` starts a blockquote
+
+> This is a blockquote
+> You can precede each line with > if you're using hard returns.  
+> Or if you're soft wrapping you can just add > to the first line.
+
+
+## code
+
+Use single backticks `` ` `` for inline code and triple backticks `` ``` `` for blocks of code.
+
+If the word or phrase you want to denote as code includes one or more backticks, you can escape it by enclosing the word or phrase in double backticks ` `` `.
+
+Here is some `inline code`.
+
+Here is some ``inline `code` with backticks``.
+
+Here is a block of code:
+```
+pip3 install mylibrary
+```
+
+You can also specify syntax highlighting:
+
+```python
+print('Python syntax highlighting')
+```
+
+
 ## lists
 
-Unordered lists can be marked with -, +, or *
+Unordered lists can be marked with `-`, `+`, or `*`
 
 * point
 * point
 * point
 
-Ordered lists can be marked with any number.
+Ordered lists can be marked with any number followed by a period `.`
 
 1. item
 1. item
 1. item
 
-Task lists:
+Task lists can be created using `[ ]` and `[x]`
+
 - [x] This is a complete item
 - [ ] This is an incomplete item
 - [ ] This is an incomplete item
@@ -119,41 +137,63 @@ Task lists:
 
 ## text styles
 
-Surround text with single \* or \_ for
+Surround text with single asterisk `*` or underscore `_` for
 *emphasized text*
 
-Surround text with double \*\* or \_\_ for
+Surround text with double asterisk `**` or underscore `__` for
 **strong text**
 
-Surround text with triple \*\*\* for
+Surround text with triple asterisk `***` for
 ***strong emphasized text***
 
-Surround text with double \~\~ for
+Surround text with double tilde `~~` for
 ~~strikethrough text~~
 
 
 ## images
 
+```
+![Alt text](img/cat.png)
+```
 ![Alt text](img/cat.png)
 
+```
+![Alt text](img/cat.png "Optional title")
+```
 ![Alt text](img/cat.png "Optional title")
 
-You can also place images using the reference method as with links above.
+To add a link to an image, enclose the Markdown for the image in brackets, and then add the link in parentheses.
+
+```
+[![Alt text](img/cat.png "Optional title")](img/cat.png)
+```
+[![Alt text](img/cat.png "Optional title")](img/cat.png)
 
 
 ## horizontal rules
 
-Insert a horizontal rule by typing 3 * or - or _ on their own line:
+Insert a horizontal rule by typing three or more `*` or `-` or `_` on their own line. For compatibility, put blank lines before and after horizontal rules.
+
+```
+***
+
+___
+
+---
+```
 
 ***
-___
----
-
 
 ## tables
 
 Use hyphens `-` to indicate header rows and pipes `|` to indicate columns:
 
+```
+id | name | email
+-- | ---- | -----
+1 | rick | rick@email.com
+2 | morty | morty@email.com
+```
 id | name | email
 -- | ---- | -----
 1 | rick | rick@email.com
@@ -179,7 +219,7 @@ _   underscore
 !   exclamation mark
 ```
 
-## TOC Generators
+## TOC generators
 
 There's a [copy/paste TOC generator](https://ecotrust-canada.github.io/markdown-toc/) for markdown. A better solution is the [installable package on github](https://github.com/jonschlinkert/markdown-toc). Here's a summary of how to get it running:
 
@@ -190,34 +230,34 @@ npm install -g markdown-toc
 
 2. In your markdown file, type:
 
-```
-<!-- toc -->
+  ```
+  <!-- toc -->
 
-<!-- tocstop -->
-```
+  <!-- tocstop -->
+  ```
 
-Headings that appear before this will not be included. For example, if you put a `## Table of Contents` heading before it, it won't get included in the TOC.
+  Headings that appear before this will not be included. For example, if you put a `## Table of Contents` heading before it, this won't get included in the toc.
 
-## Emoji
+## emoji
 
 You can insert most emoji characters using the following syntax:
 
-:warning: `:warning:`
-:exclamation: `:exclamation:`
-:question: `:question:`
-:grey_exclamation: `:grey_exclamation:`
-:grey_question: `:grey_question:`
-:star: `:star:`
-:speech_balloon: `:speech_balloon:`
-:thought_balloon: `:thought_balloon:`
-:bulb: `:bulb:`
-:clipboard: `:clipboard:`
-:pencil2: `:pencil2:`
-:x: `:x:`
+:warning: `:warning:`  
+:exclamation: `:exclamation:`  
+:question: `:question:`  
+:grey_exclamation: `:grey_exclamation:`  
+:grey_question: `:grey_question:`  
+:star: `:star:`  
+:speech_balloon: `:speech_balloon:`  
+:thought_balloon: `:thought_balloon:`  
+:bulb: `:bulb:`  
+:clipboard: `:clipboard:`  
+:pencil2: `:pencil2:`  
+:x: `:x:`  
 
 This can be combined with the blockquote syntax to make something like an admonition:
 
-> :warning: Attention: this is not as good as reStructuredText
+> :warning: Attention: this is not as good as a reStructuredText admonition
 
-A full list of markdown emoji can be found here:
+An extensive list of markdown emoji can be found here:
 <https://gist.github.com/rxaviers/7360908>

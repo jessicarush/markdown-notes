@@ -107,7 +107,7 @@ Here is a block of code:
 pip3 install mylibrary
 ```
 
-You can also specify syntax highlighting:
+You can also specify syntax highlighting by typing the language directly after the opening backticks like: `` ```python ``.
 
 ```python
 print('Python syntax highlighting')

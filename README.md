@@ -172,3 +172,27 @@ markdown-toc -i example.md
 ```
 
 I'm not sure how, but it knows to ignore the headings before `<!-- toc -->`, so for example, if you put a `## Table of Contents` heading before it, it won't get included in the TOC.
+
+## Emoji
+
+You can insert most emoji characters using the following syntax:
+
+:warning: `:warning:`
+:exclamation: `:exclamation:`
+:question: `:question:`
+:grey_exclamation: `:grey_exclamation:`
+:grey_question: `:grey_question:`
+:star: `:star:`
+:speech_balloon: `:speech_balloon:`
+:thought_balloon: `:thought_balloon:`
+:bulb: `:bulb:`
+:clipboard: `:clipboard:`
+:pencil2: `:pencil2:`
+:x: `:x:`
+
+This can be combined with the blockquote syntax to make something like an admonition:
+
+> :warning: Attention: this is not as good as reStructuredText
+
+A full list of markdown emoji can be found here:
+<https://gist.github.com/rxaviers/7360908>

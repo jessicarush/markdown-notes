@@ -2,6 +2,30 @@
 
 Examples of some of the most common usages. Yes, there are many demos and cheatsheets already out there, but the best way to learn is to do it yourself.
 
+<!-- toc -->
+
+  * [Table of contents](#table-of-contents)
+  * [links](#links)
+- [Heading 1](#heading-1)
+  * [Heading 2](#heading-2)
+    + [Heading 3](#heading-3)
+      - [Heading 4](#heading-4)
+        * [Heading 5](#heading-5)
+          + [Heading 6](#heading-6)
+  * [code](#code)
+  * [blockquotes](#blockquotes)
+  * [line breaks and paragraphs](#line-breaks-and-paragraphs)
+  * [lists](#lists)
+  * [text styles](#text-styles)
+  * [images](#images)
+  * [horizontal rules](#horizontal-rules)
+  * [tables](#tables)
+  * [backslash escapes](#backslash-escapes)
+  * [TOC Generators](#toc-generators)
+  * [Emoji](#emoji)
+
+<!-- tocstop -->
+
 ## Table of contents
 - [links](#links)
 - [headings](#heading-1)
@@ -164,15 +188,15 @@ There's a [copy/paste TOC generator](https://ecotrust-canada.github.io/markdown-
 npm install -g markdown-toc
 ```
 
-2. In your markdown file, type `
+2. In your markdown file, type:
 
+```
 <!-- toc -->
 
-- [Emoji](#emoji)
-
 <!-- tocstop -->
+```
 
-`, so for example, if you put a `## Table of Contents` heading before it, it won't get included in the TOC.
+Headings that appear before this will not be included. For example, if you put a `## Table of Contents` heading before it, it won't get included in the TOC.
 
 ## Emoji
 

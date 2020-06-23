@@ -164,14 +164,15 @@ There's a [copy/paste TOC generator](https://ecotrust-canada.github.io/markdown-
 npm install -g markdown-toc
 ```
 
-2. In your markdown file, type `<!-- toc -->` where you want the TOC to appear.
+2. In your markdown file, type `
 
-3. Run the command to generate the TOC (example filename here is example.md):
-```
-markdown-toc -i example.md
-```
+<!-- toc -->
 
-I'm not sure how, but it knows to ignore the headings before `<!-- toc -->`, so for example, if you put a `## Table of Contents` heading before it, it won't get included in the TOC.
+- [Emoji](#emoji)
+
+<!-- tocstop -->
+
+`, so for example, if you put a `## Table of Contents` heading before it, it won't get included in the TOC.
 
 ## Emoji
 

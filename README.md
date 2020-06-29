@@ -199,6 +199,19 @@ id | name | email
 1 | rick | rick@email.com
 2 | morty | morty@email.com
 
+Note that you can align your headings with the following syntax:
+- `---` default alignment
+- `:--` left aligned
+- `--:` right aligned
+- `:-:` centered
+
+For example:
+
+Default | Left Align | Right Align | Center Align
+------- | :--------- | ----------: | :----------:
+xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx |
+
+
 
 ## backslash escapes
 

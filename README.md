@@ -135,6 +135,9 @@ Task lists can be created using `[ ]` and `[x]`
 - [ ] This is an incomplete item
 
 
+**Note:** for nested lists, indent 4 spaces (github is cool with 2 but bitbucket requites 4).
+
+
 ## text styles
 
 Surround text with single asterisk `*` or underscore `_` for

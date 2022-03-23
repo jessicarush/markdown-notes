@@ -271,6 +271,14 @@ You can insert most emoji characters using the following syntax:
 :clipboard: `:clipboard:`  
 :pencil2: `:pencil2:`  
 :x: `:x:`  
+:heavy_check_mark: `:heavy_check_mark:`  
+:link: `:link:`  
+:fire: `:fire:`  
+:heart: `:heart:`  
+:zap: `:zap:`  
+:pushpin: `:pushpin:`  
+:bookmark: `:bookmark:`  
+:triangular_flag_on_post: `:triangular_flag_on_post:`  
 
 This can be combined with the blockquote syntax to make something like an admonition:
 

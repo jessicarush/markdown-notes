@@ -25,30 +25,37 @@ Examples of some of the most common usages. I recognize there are many demos and
 ## links
 
 Link to any heading within your document like this:
-```
+
+```markdown
 [Link](#lower-case-heading-replace-spaces-with-dashes)
 ```
 
 Create an external link like this:
-```
+
+```markdown
 [example link](https://daringfireball.net/projects/markdown/syntax)
 ```
+
 [example link](https://daringfireball.net/projects/markdown/syntax)
 
 You can add the title attribute like this:
-```
+
+```markdown
 [example link](https://github.com/ "Title goes here")
 ```
+
 [example link](https://github.com/ "Title goes here")
 
 You can create link references:
-```
+
+```markdown
 [Google][1], [Yahoo][2], [MSN][3]
 
 [1]: http://google.com/        "Google"
 [2]: http://search.yahoo.com/  "Yahoo Search"
 [3]: http://search.msn.com/    "MSN Search"
 ```
+
 [Google][1], [Yahoo][2], [MSN][3]
 
 [1]: http://google.com/        "Google"
@@ -56,16 +63,18 @@ You can create link references:
 [3]: http://search.msn.com/    "MSN Search"
 
 You can also create automatic links out of a url:
-```
+
+```markdown
 <https://github.com/>
 ```
+
 <https://github.com/>
 
 ## headings
 
 Headings can be indicated like:
 
-```
+```markdown
 # Heading 1
 ## Heading 2
 ### Heading 3
@@ -103,8 +112,9 @@ Here is some `inline code`.
 Here is some ``inline `code` with backticks``.
 
 Here is a block of code:
+
 ```
-pip3 install mylibrary
+pip install mylibrary
 ```
 
 You can also specify syntax highlighting by typing the language directly after the opening backticks like: `` ```python ``.
@@ -155,21 +165,24 @@ Surround text with double tilde `~~` for
 
 ## images
 
-```
+```markdown
 ![Alt text](img/cat.png)
 ```
+
 ![Alt text](img/cat.png)
 
-```
+```markdown
 ![Alt text](img/cat.png "Optional title")
 ```
+
 ![Alt text](img/cat.png "Optional title")
 
 To add a link to an image, enclose the Markdown for the image in brackets, and then add the link in parentheses.
 
-```
+```markdown
 [![Alt text](img/cat.png "Optional title")](img/cat.png)
 ```
+
 [![Alt text](img/cat.png "Optional title")](img/cat.png)
 
 
@@ -191,12 +204,13 @@ ___
 
 Use hyphens `-` to indicate header rows and pipes `|` to indicate columns:
 
-```
+```markdown
 id | name | email
 -- | ---- | -----
 1 | rick | rick@email.com
 2 | morty | morty@email.com
 ```
+
 id | name | email
 -- | ---- | -----
 1 | rick | rick@email.com
@@ -238,22 +252,41 @@ _   underscore
 
 ## TOC generators
 
-There's a [copy/paste TOC generator](https://ecotrust-canada.github.io/markdown-toc/) for markdown. A better solution is the [installable package on github](https://github.com/jonschlinkert/markdown-toc). Here's a summary of how to get it running:
+There's a [copy/paste TOC generator](https://ecotrust-canada.github.io/markdown-toc/) for markdown. I prefer [this package on github](https://github.com/jonschlinkert/markdown-toc). Here's a summary of how to get it running:
 
 1. Install the package globally:
-```
+
+```bash
 npm install -g markdown-toc
 ```
 
 2. In your markdown file, type:
 
-  ```
-  <!-- toc -->
+```markdown
+<!-- toc -->
+```
 
-  <!-- tocstop -->
-  ```
+:warning: Note the above code example will prevent markdown-toc from working properly in this file: `throw new Error('markdown-toc only supports one Table of Contents per file.');`
 
-  Headings that appear before this will not be included. For example, if you put a `## Table of Contents` heading before it, this won't get included in the toc.
+Headings that appear before this will not be included. For example, if you put a `## Table of Contents` heading before it, this won't get included in the toc.
+
+3. Run the command to add a toc:
+
+```bash
+markdown-toc -i README.md
+```
+
+You could also write a custom command in your `.bash_aliases`:
+
+```
+# Create a table of contents for all markdown files in the current directory
+mdtoc () {
+  for i in *.md; do
+    markdown-toc -i $i;
+  done
+}
+```
+
 
 ## emoji
 

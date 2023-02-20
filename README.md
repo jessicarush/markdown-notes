@@ -187,8 +187,9 @@ To add a link to an image, enclose the Markdown for the image in brackets, and t
 
 
 ## Test 
-
-<img src="img/cat.png" style="background-color: red;" />
+<div style="background-color: red;">
+<img src="img/cat.png" />
+</div>
 
 ## horizontal rules
 

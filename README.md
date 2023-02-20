@@ -186,11 +186,6 @@ To add a link to an image, enclose the Markdown for the image in brackets, and t
 [![Alt text](img/cat.png "Optional title")](img/cat.png)
 
 
-## Test 
-<div style="background-color: red;">
-<img src="img/cat.png" />
-</div>
-
 ## horizontal rules
 
 Insert a horizontal rule by typing three or more `*` or `-` or `_` on their own line. For compatibility, put blank lines before and after horizontal rules.

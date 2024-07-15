@@ -200,6 +200,7 @@ ___
 
 ***
 
+
 ## tables
 
 Use hyphens `-` to indicate header rows and pipes `|` to indicate columns:
@@ -230,7 +231,6 @@ Default | Left Align | Right Align | Center Align
 xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx | xxxxxxxxxxxxxxx |
 
 
-
 ## backslash escapes
 
 Markdown provides backslash escapes for the following characters:
@@ -249,6 +249,7 @@ _   underscore
 .   dot
 !   exclamation mark
 ```
+
 
 ## TOC generators
 
